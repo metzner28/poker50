@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<div class="mx-auto">
+    <p>Ever seen poker online or on TV and wondered how the probability percentages next to each hand are generated?
+    If you're not a poker player, probably not, but here's an example from a notable hand in this year's 2017 World Series of Poker Main Event:</p>
+</div>
+
+<div class="mx-auto" style="width: 200px;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Dd_VJ6l29-k" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+</div>
+
+<hr>
+
+<div>
+    <p>Given a number of players and their two-card starting hands, as well as (optionally) any community cards that have
+    already been dealt, Poker50 simulates 100,000 trials and returns the percentage of trials won by each hand -- this
+    approaches each hand's equity, or probability of winning the given hand, and is accurate up to 0.01%. Click
+    Poker50 above to get started! </p>
+</div>
+
+<div>Instructions:
+    <ul>
+        <li>Type in an integer number of players between 2 and 9</li>
+        <li>Type in each of their hands with uppercase values, lowercase suits, and no spaces (Ace-King of hearts
+        would be AhKh; a pair of tens, clubs and spades, would be TcTs)</li>
+        <li>Type in the board -- cards already dealt -- if any</li>
+        <li>Click run and view results!</li>
+    </ul>
+</div>
+
+
+
+{% endblock %}

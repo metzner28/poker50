@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+<!-- from pset6/pset7 distribution code-->
+
+{% block main %}
+    <form action="/hands" method="get">
+         <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="players" placeholder="Players (2-9)" type="number"/>
+        </div>
+        <button class="btn btn-primary" type="submit">Next</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<table action="/results" class="table table-striped">
+    <thead>
+            <tr>
+                <th>Hand</th>
+                <th>Equity</th>
+            </tr>
+    </thead>
+
+    <tbody>
+        {% for hand in handsDict %}
+        <tr>
+                <td>
+                    {{hand}}
+                </td>
+                <td>
+                    {{handsDict[hand]}}%
+                </td>
+        </tr>
+        {% endfor %}
+        <tr>
+                <td>
+                    Chop
+                </td>
+                <td>
+                    {{chop}}%
+                </td>
+        </tr>
+
+        {% if boardinput %}
+        <tr>
+            <td>Board:</td>
+            <td>{{boardinput}}</td>
+        </tr>
+        {% endif %}
+
+    </tbody>
+
+</table>
+{% endblock %}

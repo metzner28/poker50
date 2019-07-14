@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <form action="/calculate" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="board" placeholder="Board (if any)" type="text"/>
+        </div>
+        <hr>
+        {% for i in range(players) %}
+         <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="hand" placeholder="Hand, like AhKh" type="text"/>
+        </div>
+        {% endfor %}
+        <button class="btn btn-primary" type="submit">Run</button>
+    </form>
+{% endblock %}
